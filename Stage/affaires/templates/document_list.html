@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<h2>document list</h2>
+<table class="table mb-0">
+    <thead>
+    <tr>
+
+        <th>Title</th>
+        <th>PDF</th>
+        <th>Cover</th>
+    </tr>
+    </thead>
+{% for document in documents %}
+    <tr>
+
+        <td>{{ document.title }}</td>
+        <td>{{ document.pdf }}</td>
+        {% if document.pdf %}
+        <td><a href="{{ document.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">Download PDF</a></td>
+        {% endif %}
+         {% if document.cover %}
+        <td><img src="{{ document.cover.url }}" alt="{{ document.title }}" style="width:100px;"></td>
+        {% endif %}
+    </tr>
+
+
+{% endfor %}
+
+</table>
+{% endblock %}
+</body>
+</html>

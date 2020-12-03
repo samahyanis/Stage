@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+{% block content %}
+
+<h2>Affaire : {{ type }}</h2>
+
+<div>
+    <a href="{% url 'suivi_container' %}"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span> suivre mon container</button></a>
+</div>
+
+
+<section id="">
+  <div class="container-fluid page-wrap">
+    <!-- content here -->
+
+<!-- Tab panes -->
+
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="sutherland-lang">
+<div class="table-responsive">
+<table class="table table-centered" >
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>telecharger le document</td>
+            <td>Titre du document</td>
+            <td>Validation</td>
+
+        </tr>
+
+        <tr>
+            <td style="text-align: left;">Invoice</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✘ <span class="sr-only">no</span></td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Packaging List</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Weight List</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Certificate Of Health</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Bill Of Lading</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Certificate Of Origine</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Analysis Certificate</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">European Circulation Certificate</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Certificat De Conformite</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Certificat D'age</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Packaging List</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Attestation de libre commercialisation</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Certificat Analyse Bacterio</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">certificat physico himique</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;">Certificat veterinaire</td>
+            <td> <a href="{% url 'upload_document' id=id %}">telecharger</a> <span class="sr-only">yes</span></td>
+            <td><a href="{% url 'document_list' id=id %}">Consulter</a><span class="sr-only">yes</span></td>
+            <td>✔ <span class="sr-only">yes</span></td>
+
+        </tr>
+    </tbody>
+
+</table>
+    <button type="submit" class="btn btn-primary">Valider</button>
+</div>
+</div>
+</div>
+  </div>
+</section>
+<a href="{% url 'suivi_paiement' %}"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span> paiement</button></a>
+
+<div>
+    <a href="{% url 'suivi_originaux' %}"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> suivi envoi originaux</button></a>
+</div>
+
+{% endblock %}
+</body>
+</html>

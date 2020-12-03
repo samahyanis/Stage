@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Output</title>
+</head>
+<body>
+<style>
+@page {
+    size: "A4";
+    margin: 2,5cm 1,5cm 3,5cm 1,5cm;
+
+    @top-center{
+        content: "COMPANY NAME";
+      }
+    @bottom-right{
+        content: "page " counter(page)" of "counter(pages);
+    }
+</style>
+<h2>Affaires List </h2>
+{% block content %}
+<table class="table">
+    <thead class="thead">
+        <tr>
+
+            <th>Type</th>
+            <th>destinataire</th>
+            <th>prix</th>
+            <th>commentaires</th>
+        </tr>
+    </thead>
+    {% csrf_token %}
+
+    <tbody>
+
+
+        <tr>
+
+            <td>{{affaire.type}}</td>
+            <td>{{affaire.destinataire}}</td>
+            <td>{{affaire.prix}}</td>
+            <td>{{affaire.commentaires}}</td>
+        </tr>
+
+
+    </tbody>
+
+</table>
+{% endblock %}
+</body>
+</html>
